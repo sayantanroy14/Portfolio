@@ -1,0 +1,430 @@
+/* ---- SETUP ---- */
+
+
+* {
+	margin: 0;
+	box-sizing: border-box;
+  padding: 0;
+}
+
+html,
+body {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 20px;
+  font-weight: 300;
+	overflow-x: hidden;
+  text-rendering: optimizeLegibility;
+}
+
+/* ---- REUSABLE COMPONENTS ---- */
+
+.row {
+	max-width: 1140px;
+	margin: 0 auto;
+}
+
+section {
+	padding: 70px 0;
+}
+
+.box {
+	padding: 1.5%;
+}
+
+/* ----- HEADINGS ----- */
+
+h1,
+h2,
+h3 {
+	font-weight: 300;
+	text-transform: uppercase;
+}
+
+h1 {
+	margin-top: 0;
+	margin-bottom: 20px;
+  font-size: 240%;
+	color: #fff;
+	letter-spacing: 1px;
+	word-spacing: 4px;
+}
+
+h2 {
+	font-size: 175%;
+  letter-spacing: 1.5px;
+	word-spacing: 1.5px;
+	text-align: center;
+	margin-bottom: 25px;
+}
+
+h3 {
+	margin-bottom: 20px;
+	font-size: 125%;
+}
+
+/* ----- UNDERLINE ----- */
+
+h2:after {
+	display: block;
+	width: 115px;
+	margin: 0 auto;
+	margin-top: 12px;
+	height: 2.5px;
+	content: " ";
+	background-color: rebeccapurple;
+}
+
+/* ---- WELCOME SECTION ---- */
+
+
+header {
+	background-color: #fff;
+	color: #555;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(https://upload.wikimedia.org/wikipedia/en/3/36/Layered_rainbow_gradient_from_photoshop_default_settings.jpg);
+	background-size: cover;
+	background-position: center;
+	height: 100vh;
+	background-attachment: fixed;
+}
+
+.header-text-box {
+	position: relative;
+	width: 330px;
+	top: 50%;
+	left: 30%;
+	transform: translate(-50%, -50%);
+	padding-left: 100px;
+}
+
+.header-text-box p {
+	color: white;
+	opacity: 0.4;
+}
+
+.logo {
+	height: 70px;
+	width: auto;
+	float: left;
+	margin-top: 10px;
+	padding-left: 20px;
+}
+
+/* ----- NAVBAR ----- */
+
+#navbar {
+	overflow: hidden;
+}
+
+/* ---- NAVLINKS ---- */
+
+.navlinks {
+	float: right;
+	list-style: none;
+	margin: 30px 20px 30px 0;
+}
+
+.navlinks li {
+	display: inline-block;
+	margin-left: 40px;
+}
+
+.navlinks li a:link,
+.navlinks li a:visited {
+	padding: 2px 0;
+	color: #fff;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 90%;
+	border-bottom: 2px solid transparent;
+	transition: border-bottom 0.2s;
+}
+
+.navlinks li a:hover,
+.navlinks li a:active {
+	border-bottom: 2px solid rebeccapurple;
+}
+
+
+/* ---- STICKY NAV ---- */
+
+.sticky {
+	position: fixed;
+	top: 0;
+	left: 0;
+	padding-bottom: 10px;
+	width: 100%;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(https://upload.wikimedia.org/wikipedia/en/3/36/Layered_rainbow_gradient_from_photoshop_default_settings.jpg);
+	background-size: cover;
+	box-shadow: 0 0.25px 0.25px white;
+	z-index: 9999;
+	transition: .4s;
+}
+
+.sticky #navbar li a:link,
+.sticky #navbar li a:visited {
+	padding: 16px 0;
+	color: #555;
+}
+
+/* ----- ABOUT ----- */
+
+#about {
+	padding: 140px 10px 50px 10px;
+	margin-top: 0px;
+}
+
+
+#about-two {
+	animation-delay: 0.2s;
+}
+
+#about-three {
+	animation-delay: 0.4s;
+}
+
+#about-four {
+	animation-delay: 0.6s;
+}
+
+/* ---- PROJECTS ---- */
+
+
+#projects {
+	padding-top: 140px;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(https://upload.wikimedia.org/wikipedia/en/3/36/Layered_rainbow_gradient_from_photoshop_default_settings.jpg);
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	
+}
+
+#projects-heading {
+	color: white;
+	font-size: 250%;
+	text-align: center;
+	letter-spacing: 2px;
+	padding-bottom: 80px;
+}
+
+.blackground {
+	position: absolute;
+	display: block;
+	background-color: black;
+	opacity: 0.3;
+	width: 100%;
+	height: 220px;
+	margin-top: -240px;
+	z-index: 0;
+}
+
+.projects-showcase-item {
+	display: block;
+	float: top;
+	width: 25%;
+}
+
+
+.project-tile {
+	position: relative;
+	width: 300px;
+	margin: 30px;
+	overflow: hidden;
+	background-color: #000;
+	border-radius: 5%;
+	height: 200px;
+	animation-delay: 1.3s;
+	z-index: 9999;
+}
+
+
+.project-tile img {
+	opacity: 0.6;
+	width: 100%;
+	height: auto;
+	transform: scale(1.1);
+	opacity: 0.5s;
+	transition: transform 0.5s, opacity 0.5s;
+}
+
+.project-tile img:hover {
+	opacity: 1;
+	transform: scale(1.05);
+}
+
+
+.projects-info {
+	position: absolute;
+	display: block;
+	float: right;
+	padding-left: 350px;
+	width: 95%;
+	color: white;
+	font-size: 80%;
+	animation-delay: 0.5s;
+	margin-top: -220px;
+}
+
+
+.projects-info h2 {
+	font-size: 150%;
+	margin-bottom: 10px;
+}
+
+.hidden {
+	display: none;
+}
+
+
+/* ----- CONTACT ----- */
+
+#contact {
+	height: 800px;
+	padding-top: 140px;
+}
+
+#contact-heading {
+	margin-bottom: -20px;
+	animation-delay: 0.2s;
+}
+
+/* ---- FOOTER ---- */
+
+footer {
+	text-align: center;
+	background-color: #666;
+	padding: 25px;
+	font-size: 90%;
+}
+
+
+.social-links a {
+	text-decoration: none;
+	font-size: 50px;
+	color: #999;
+	transition: color 0.2s;
+	padding: 5px;
+}
+
+.social-links a:hover {
+	color: orange;
+}
+
+footer p {
+	color: #999;
+	text-align: center;
+}
+
+/* ---- MEDIA QUERIES ---- */
+
+/navbar breakpoint/
+
+@media only screen and (max-width: 600px) {
+
+	.box {
+		padding: 5px;
+	}
+
+	nav {
+		padding: 0px 10px 0 10px;
+		max-height: 160px;
+	}
+
+	.navlinks {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+		justify-content: center;
+		margin: 10px 20px 10px 0;
+	}
+}
+
+/projects breakpoints/
+
+@media only screen and (max-width: 1200px) {
+	
+	.projects-info {
+		font-size: 70%;
+		line-height: 1.3;
+	}
+}
+
+@media only screen and (max-width: 1000px) {
+	
+	.projects-info {
+		font-size: 67%;
+	}
+}
+
+@media only screen and (max-width: 920px) {
+	
+	.projects-info {
+		font-size: 65%;
+	}
+}
+
+@media only screen and (max-width: 860px) {
+
+	.projects-info {
+		position: relative;
+		display:grid;
+		float: left;
+		padding-left: 30px;
+		width: 400%;
+		font-size: 100%;
+		padding: 20px 0 20px 30px;
+		background:rgba(0,0,0,0.1);
+		margin-top: 0px;
+	}
+	
+	.project-tile {
+	position: relative;
+	width: 100vw;
+	margin: auto;
+	overflow: hidden;
+	border-radius: 0%;
+	height: 200px;
+}
+	
+	.blackground {
+		display: none;
+	}
+	
+	#projects {
+		padding-bottom: 400px;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	
+	.projects-info {
+		padding: 20px;
+	}
+	
+	#projects {
+		padding-top: 120px;
+		padding-bottom: 450px;
+	}
+	
+	#projects h2 {
+		font-size: 180%;
+		padding-bottom: 30px;
+	}
+}
+
+@media only screen and (max-width: 460px) {
+	
+	
+	#projects {
+		padding-top: 30px;
+		padding-bottom: 300px;
+	}
+	
+	#projects h2 {
+		font-size: 180%;
+		padding-bottom: 0px;
+	}
+	
+	#about {
+		padding-top: 30px;
+	}
+}
